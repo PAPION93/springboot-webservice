@@ -8,3 +8,8 @@ application-real-oauth.properties
 
 build
 out
+
+bin/
+.settings
+.classpath
+.project
