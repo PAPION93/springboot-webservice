@@ -36,14 +36,14 @@ public class HelloControllerTest {
     }
 
     @Test
-    public void helloDto가_리턴된다() throws Exception{
+    public void helloDto가_리턴된다() throws Exception {
         String name = "hello";
         int amount = 1000;
 
         mvc.perform(
                 get("/hello/dto")
-                    .param("name", name)
-                    .param("amount", String.valueOf(amount)))
+                        .param("name", name)
+                        .param("amount", String.valueOf(amount)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is(name)))
                 .andExpect(jsonPath("$.amount", is(amount)));
