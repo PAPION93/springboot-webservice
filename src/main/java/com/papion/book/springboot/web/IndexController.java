@@ -19,6 +19,7 @@ public class IndexController {
     private final PostsService postsService;
     private final HttpSession httpSession;
 
+    /*
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
@@ -29,6 +30,7 @@ public class IndexController {
         }
         return "index";
     }
+     */
 
     @GetMapping("/posts/save")
     public String postsSave() {

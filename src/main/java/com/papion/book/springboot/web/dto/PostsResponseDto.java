@@ -3,8 +3,12 @@ package com.papion.book.springboot.web.dto;
 import com.papion.book.springboot.domain.posts.Posts;
 import lombok.Getter;
 
+/**
+ * 조회 Dto
+ */
 @Getter
 public class PostsResponseDto {
+
     private Long id;
     private String title;
     private String content;
