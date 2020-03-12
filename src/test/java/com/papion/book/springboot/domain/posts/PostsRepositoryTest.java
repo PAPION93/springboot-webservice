@@ -46,7 +46,6 @@ public class PostsRepositoryTest {
 
     }
 
-    /*
     @Test
     public void BastTieEntity_등록() {
 
@@ -69,6 +68,5 @@ public class PostsRepositoryTest {
         assertThat(posts.getCreatedDate()).isAfter(now);
         assertThat(posts.getModifiedDate()).isAfter(now);
     }
-    */
 
 }
