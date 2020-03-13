@@ -15,9 +15,15 @@ import javax.servlet.http.HttpSession;
 @RequiredArgsConstructor
 @Controller
 public class IndexController {
-
     private final PostsService postsService;
+
     private final HttpSession httpSession;
+
+    @GetMapping("/")
+    public String index(Model model) {
+        model.addAttribute("posts", postsService.findAllDesc());
+        return "index";
+    }
 
     /*
     @GetMapping("/")
@@ -29,8 +35,7 @@ public class IndexController {
             model.addAttribute("userName", user.getName());
         }
         return "index";
-    }
-     */
+    }*/
 
     @GetMapping("/posts/save")
     public String postsSave() {

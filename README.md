@@ -5,20 +5,26 @@
     - 외부 요청과 응답에 대한 전반적인 영역
 
 - Service
+    - @Service에 사용되는 서비스 영역
     - 일반적으로 Controller와 DAO의 중간 영역에서 사용
     - Repository의 method를 이용
+    - `트랜잭션, 도메인 간 순서보장 역할`
 
 - Repository(dao)
     - Database와 같이 데이터 저장소에 접근하는 영역
     - Service와 DB를 연결하는 고리의 역할을 한다
     - JPA
+    
+- Domain
+    - 도메인이라 불리는 개발대상을 모든 사람이 동일한 관점에서 이해할 수 있고,   
+    공유할 수 있도록 단순화시킨 것을 도메인 모델이라고 한다.
+    - 예로 택시앱이라고 하면 배차, 탑승, 요금 등 모두 도메인이 될 수 있다.
+    - `비지니스 로직`을 처리해야 할 곳
 
----
- 
 - DTO
     - 계층간 데이터 교환을 위한 객체  
-    - DB에서 데이터를 얻어 Service나 Controller 등으로 보낼 때 사용하는 객체  
-    - 즉, DB의 데이터가 Presentation Login Tier로 넘어오게 될 때는 DTO의 모습으로 바껴서 오가는 것이다.
+    - 뷰에서 사용될 객체 또는 Repository Layer에서 결과로 넘겨준 객체 등
+
 
 - Entity Class
     - 실제 DB의 테이블과 매칭

@@ -93,11 +93,6 @@ public class PostsApiControllerTest {
          */
         HttpEntity<PostsUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
 
-        System.out.println("--------------------------");
-        System.out.println(requestEntity);
-        System.out.println("--------------------------");
-
-        //when
         /**
          * @param url the URL
          * @param method the HTTP method (GET, POST, etc)
@@ -105,6 +100,7 @@ public class PostsApiControllerTest {
          * be {@code null}
          * @param responseType the type of the return value
          */
+        //when
         ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Long.class);
 
         //then
