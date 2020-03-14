@@ -1,5 +1,6 @@
 package com.papion.book.springboot.web;
 
+import com.papion.book.springboot.config.auth.LoginUser;
 import com.papion.book.springboot.config.auth.dto.SessionUser;
 import com.papion.book.springboot.domain.user.User;
 import com.papion.book.springboot.service.posts.PostsService;
@@ -20,22 +21,15 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
-        model.addAttribute("posts", postsService.findAllDesc());
-        return "index";
-    }
+    public String index(Model model, @LoginUser SessionUser user) {
 
-    /*
-    @GetMapping("/")
-    public String index(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
         return "index";
-    }*/
+    }
 
     @GetMapping("/posts/save")
     public String postsSave() {

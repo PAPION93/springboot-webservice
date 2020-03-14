@@ -2,11 +2,10 @@ package com.papion.book.springboot.config.auth;
 
 import com.papion.book.springboot.domain.user.Role;
 import lombok.RequiredArgsConstructor;
-//import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-//import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-//import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-/*
 @RequiredArgsConstructor
 @EnableWebSecurity
 public class SecuriyConfig extends WebSecurityConfigurerAdapter {
@@ -33,5 +32,3 @@ public class SecuriyConfig extends WebSecurityConfigurerAdapter {
 
     }
 }
-
- */
