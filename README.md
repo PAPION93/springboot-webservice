@@ -26,7 +26,7 @@
     - 뷰에서 사용될 객체 또는 Repository Layer에서 결과로 넘겨준 객체 등
 
 
-- Entity Classt
+- Entity Class
     - 실제 DB의 테이블과 매칭
     
 ---
