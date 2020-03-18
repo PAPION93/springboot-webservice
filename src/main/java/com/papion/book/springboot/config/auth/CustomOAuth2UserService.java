@@ -17,6 +17,9 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpSession;
 import java.util.Collections;
 
+/**
+ * 리소스서버에서 사용자정보를 가져온 상태에서 추가로 진행하고자 하는 기능 명시
+ */
 @RequiredArgsConstructor
 @Service
 public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
@@ -29,7 +32,10 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         OAuth2UserService delegate = new DefaultOAuth2UserService();
         OAuth2User oAuth2User = delegate.loadUser(userRequest);
 
+        // 서비스 구분(구글, 네이버, 카카오톡 등)
         String registrationId = userRequest.getClientRegistration().getRegistrationId();
+
+        // OAuth2 로그인 진행시 키가되는 필드값
         String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails()
                 .getUserInfoEndpoint().getUserNameAttributeName();
 
